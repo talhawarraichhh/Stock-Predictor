@@ -32,6 +32,12 @@ nav ul li a {
     text-decoration: none;
     color: #343a40;
     font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition effect */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Change this color to your desired hover color */
+    text-decoration: underline;
 }
 
 .auth-buttons {
@@ -44,6 +50,7 @@ nav ul li a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition effect */
 }
 
 .auth-buttons .sign-up {
@@ -54,6 +61,14 @@ nav ul li a {
 .auth-buttons .log-in {
     background-color: #6c757d;
     color: white;
+}
+
+.auth-buttons .sign-up:hover {
+    background-color: #0056b3; /* Change this color to your desired hover color */
+}
+
+.auth-buttons .log-in:hover {
+    background-color: #5a6268; /* Change this color to your desired hover color */
 }
 
 .hero {
@@ -108,8 +123,15 @@ nav ul li a {
     background-color: #0056b3;
 }
 
-.hero-image img {
-    max-width: 100%;
-    height: auto;
+.hero-images {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-images img {
     border-radius: 10px;
+}
+
+.hero-images .large-image {
+    width: 100%; /* Adjust this value if needed */
 }
