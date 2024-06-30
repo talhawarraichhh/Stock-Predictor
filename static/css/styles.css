@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #343a40;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition effect */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Change this color to your desired hover color */
+    text-decoration: underline;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.auth-buttons .sign-up {
+    background-color: #007bff;
+    color: white;
+}
+
+.auth-buttons .log-in {
+    background-color: #6c757d;
+    color: white;
+}
+
+.auth-buttons .sign-up:hover {
+    background-color: #0056b3; /* Change this color to your desired hover color */
+}
+
+.auth-buttons .log-in:hover {
+    background-color: #5a6268; /* Change this color to your desired hover color */
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(90deg, #000000 0%, #1a1a1a 100%);
+    color: white;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.hero form {
+    margin-top: 30px;
+}
+
+.hero form label, .hero form input, .hero form button {
+    font-size: 1.2em;
+}
+
+.hero form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.hero form button {
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero form button:hover {
+    background-color: #0056b3;
+}
+
+.hero-images {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-images img {
+    border-radius: 10px;
+}
+
+.hero-images .large-image {
+    width: 100%; /* Adjust this value if needed */
+}
