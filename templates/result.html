@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Predicted Stock Prices for {{ ticker }} for the Next Month</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Markets</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Download</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Promotion</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <button class="sign-up">Sign Up</button>
+          <button class="log-in">Log In</button>
+        </div>
+      </nav>
+    </header>
+    <main
+      style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.55)), url('{{ url_for('static', filename='images/background_image.jpg') }}'); background-size: cover; background-repeat: no-repeat; background-position: center center;"
+    >
+      <div class="result-container">
+        <section class="result">
+          <h1>Predicted Stock Prices for {{ ticker }} for the Next Month</h1>
+          <div id="graph">{{ graph_html|safe }}</div>
+          <h2>Predicted Price For Next Month:</h2>
+          <p>{{ predictions[-1][0] }}</p>
+          <h2
+            class="{% if percentage_change >= 0 %}percentage-increase{% else %}percentage-decrease{% endif %}"
+          >
+            Percentage Change: {{ percentage_change }}%
+          </h2>
+          <a href="/" class="go-back">Go Back</a>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
